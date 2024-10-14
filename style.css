@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; }
+.login-container { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.login-box { padding: 20px; border: 1px solid #ccc; text-align: center; }
+
+#createPost { position: absolute; top: 10px; left: 10px; }
+.post-form { display: none; margin-top: 50px; }
