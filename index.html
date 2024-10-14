@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Post Creation Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>Enter Password</h2>
-            <input type="password" id="password" placeholder="Enter password"><br><br>
-            <button onclick="checkPassword()">Login</button>
-        </div>
+    <div id="password-screen">
+        <h2>Enter Password</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-msg"></p>
     </div>
 
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === "EclipseCATOweb") {
-                window.location.href = 'main.html'; // Giriş başarılıysa ana sayfaya yönlendir
-            } else {
-                alert("Wrong password!");
-            }
-        }
-    </script>
+    <div id="main-content" style="display: none;">
+        <button id="create-post-btn" onclick="openPostForm()">Create Post</button>
+
+        <div id="post-form" style="display: none;">
+            <h2>Create a Post</h2>
+            <input type="file" id="file-upload">
+            <button onclick="nextStep()">Next</button>
+        </div>
+
+        <div id="category-step" style="display: none;">
+            <h2>Select or Enter Category</h2>
+            <input type="text" id="category" placeholder="Enter category">
+            <button onclick="askUsername()">Next</button>
+        </div>
+
+        <div id="username-step" style="display: none;">
+            <h2>Enter Your Username</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <button onclick="finalizePost()">Finalize Post</button>
+        </div>
+
+        <div id="posts"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
