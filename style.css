@@ -1,6 +1,34 @@
-body { font-family: Arial, sans-serif; }
-.login-container { display: flex; justify-content: center; align-items: center; height: 100vh; }
-.login-box { padding: 20px; border: 1px solid #ccc; text-align: center; }
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
 
-#createPost { position: absolute; top: 10px; left: 10px; }
-.post-form { display: none; margin-top: 50px; }
+#password-screen, #main-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#password-screen input, #main-content input {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#posts {
+    margin-top: 50px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post img, .post video {
+    max-width: 100%;
+    display: block;
+}
